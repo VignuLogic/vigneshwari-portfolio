@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vigneshwari Subhanji | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f0;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+
+    .page-controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-print {
+      background: #7C3AED;
+      color: #fff;
+    }
+
+    .btn-back {
+      background: #fff;
+      color: #7C3AED;
+      border: 1.5px solid #7C3AED;
+    }
+
+    .resume {
+      width: 794px;
+      min-height: 1123px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 48px 52px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    /* ── HEADER ── */
+    .r-header {
+      border-bottom: 2.5px solid #7C3AED;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+    }
+
+    .r-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+
+    .r-role {
+      font-size: 14px;
+      color: #7C3AED;
+      font-weight: 500;
+      margin: 4px 0 12px;
+    }
+
+    .r-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 12.5px;
+      color: #444;
+    }
+
+    .r-contacts a {
+      color: #7C3AED;
+      text-decoration: none;
+    }
+
+    .r-contacts span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ── SECTIONS ── */
+    .r-section {
+      margin-bottom: 18px;
+    }
+
+    .r-section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #7C3AED;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+    }
+
+    /* ── EDUCATION ── */
+    .r-edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .r-edu-left h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .r-edu-left p {
+      font-size: 13px;
+      color: #555;
+      margin-top: 2px;
+    }
+
+    .r-edu-right {
+      font-size: 12.5px;
+      color: #777;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── SKILLS ── */
+    .r-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 40px;
+    }
+
+    .r-skill-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .r-skill-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    .r-skill-value {
+      color: #444;
+    }
+
+    /* ── PROJECTS ── */
+    .r-project {
+      margin-bottom: 14px;
+    }
+
+    .r-project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .r-project-header h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .r-project-header a {
+      font-size: 12px;
+      color: #7C3AED;
+      text-decoration: none;
+    }
+
+    .r-project-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin: 5px 0;
+    }
+
+    .r-project-tags span {
+      font-size: 11px;
+      background: #f3f0ff;
+      color: #7C3AED;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .r-project p {
+      font-size: 12.5px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .r-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 40px;
+    }
+
+    .r-cert-item {
+      font-size: 12.5px;
+      color: #333;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .r-cert-item::before {
+      content: '▸';
+      color: #7C3AED;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .r-cert-item small {
+      color: #777;
+      font-size: 11.5px;
+    }
+
+    /* ── ACHIEVEMENT ── */
+    .r-achievement {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #f9f7ff;
+      border-left: 3px solid #7C3AED;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .r-achievement p {
+      font-size: 13px;
+      color: #333;
+    }
+
+    .r-achievement strong {
+      color: #7C3AED;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: #fff; }
+      .page-controls { display: none; }
+      .resume {
+        margin: 0;
+        box-shadow: none;
+        padding: 32px 40px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls -->
+  <div class="page-controls">
+    <a href="index.html" class="btn btn-back">← Portfolio</a>
+    <button class="btn btn-print" onclick="window.print()">Download PDF</button>
+  </div>
+
+  <!-- Resume -->
+  <div class="resume">
+
+    <!-- Header -->
+    <div class="r-header">
+      <div class="r-name">Vigneshwari Subhanji</div>
+      <div class="r-role">Data Analyst · Web Developer · IoT Developer</div>
+      <div class="r-contacts">
+        <span>📧 <a href="mailto:vignua09@gmail.com">vignua09@gmail.com</a></span>
+        <span>📍 Bharuch, Gujarat, India</span>
+        <span>🔗 <a href="https://www.linkedin.com/in/vigneshwari-subhanji-b9b290312/" target="_blank">LinkedIn</a></span>
+        <span>💻 <a href="https://github.com/VignuLogic" target="_blank">GitHub</a></span>
+        <span>🌐 <a href="https://vignulogic.github.io/vigneshwari-portfolio/" target="_blank">Portfolio</a></span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section">
+      <div class="r-section-title">Education</div>
+      <div class="r-edu-row">
+        <div class="r-edu-left">
+          <h4>Bachelor of Technology — Computer Science Engineering</h4>
+          <p>P.P. Savani University, Surat, Gujarat</p>
+        </div>
+        <div class="r-edu-right">
+          2022 — 2026<br/>3rd Year
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="r-section">
+      <div class="r-section-title">Technical Skills</div>
+      <div class="r-skills-grid">
+        <div class="r-skill-row">
+          <span class="r-skill-label">Languages</span>
+          <span class="r-skill-value">Python, SQL, JavaScript, HTML, CSS</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Frameworks</span>
+          <span class="r-skill-value">Flask, Next.js, React</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Data & Analytics</span>
+          <span class="r-skill-value">Power BI, Pandas, scikit-learn, Excel</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Database</span>
+          <span class="r-skill-value">MySQL, Git, GitHub</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Design</span>
+          <span class="r-skill-value">Figma, Canva</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Other</span>
+          <span class="r-skill-value">IoT Integration, REST APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="r-section">
+      <div class="r-section-title">Projects</div>
+
+      <div class="r-project">
+        <div class="r-project-header">
+          <h4>Customer Churn Dashboard</h4>
+          <a href="https://github.com/VignuLogic" target="_blank">github.com/VignuLogic</a>
+        </div>
+        <div class="r-project-tags">
+          <span>Python</span><span>scikit-learn</span><span>Power BI</span><span>Pandas</span>
+        </div>
+        <p>Built an end-to-end data analytics pipeline to predict customer churn using machine learning. Performed data cleaning, feature engineering, trained a classification model with scikit-learn, and created an interactive Power BI dashboard to visualise churn patterns and business insights.</p>
+      </div>
+
+      <div class="r-project">
+        <div class="r-project-header">
+          <h4>MyPetCare — IoT Pet Health Monitor</h4>
+          <a href="https://github.com/VignuLogic" target="_blank">github.com/VignuLogic</a>
+        </div>
+        <div class="r-project-tags">
+          <span>Flask</span><span>MySQL</span><span>Python</span><span>IoT</span><span>HTML/CSS</span>
+        </div>
+        <p>Developed a full-stack IoT-integrated web application for smart pet care. Features include real-time sensor data monitoring, health tracking, appointment scheduling, and a responsive dashboard built with Flask and MySQL.</p>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="r-section">
+      <div class="r-section-title">Certifications</div>
+      <div class="r-cert-grid">
+        <div class="r-cert-item">100 Days of Code — Python <small>· Udemy</small></div>
+        <div class="r-cert-item">Learning Analytics Tools <small>· NPTEL, IIT Bombay</small></div>
+        <div class="r-cert-item">Python for Data Science <small>· Saylor Academy</small></div>
+        <div class="r-cert-item">Data Analytics & Visualization <small>· Accenture, Forage</small></div>
+        <div class="r-cert-item">Google Gen AI Study Jams <small>· Google Developer Groups</small></div>
+        <div class="r-cert-item">Prompt Design in Vertex AI <small>· Google Cloud</small></div>
+        <div class="r-cert-item">Web Development Basics <small>· GDGc PPSU</small></div>
+      </div>
+    </div>
+
+    <!-- Achievement -->
+    <div class="r-section">
+      <div class="r-section-title">Achievement</div>
+      <div class="r-achievement">
+        <p>🏆 <strong>Top 10 out of 135 teams</strong> at INDUX 5.0 National Hackathon 2025 — awarded ₹5,000 cash prize for innovative problem solving under competitive conditions.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
