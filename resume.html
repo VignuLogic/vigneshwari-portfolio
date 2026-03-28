@@ -26,24 +26,21 @@
 
     .btn {
       padding: 10px 20px;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      border: none;
+      border: 1px solid #ccc;
       text-decoration: none;
       display: inline-block;
+      background: #fff;
+      color: #333;
     }
 
     .btn-print {
-      background: #7C3AED;
+      background: #222;
       color: #fff;
-    }
-
-    .btn-back {
-      background: #fff;
-      color: #7C3AED;
-      border: 1.5px solid #7C3AED;
+      border-color: #222;
     }
 
     .resume {
@@ -51,63 +48,59 @@
       min-height: 1123px;
       margin: 40px auto;
       background: #fff;
-      padding: 48px 52px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      padding: 52px 56px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     }
 
     /* ── HEADER ── */
-    .r-header {
-      border-bottom: 2.5px solid #7C3AED;
-      padding-bottom: 18px;
-      margin-bottom: 20px;
-    }
-
     .r-name {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: -0.5px;
+      color: #111;
+      letter-spacing: -0.3px;
     }
 
     .r-role {
-      font-size: 14px;
-      color: #7C3AED;
-      font-weight: 500;
-      margin: 4px 0 12px;
+      font-size: 13.5px;
+      color: #555;
+      font-weight: 400;
+      margin: 5px 0 12px;
     }
 
     .r-contacts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 20px;
       font-size: 12.5px;
       color: #444;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid #222;
+      margin-bottom: 20px;
+      line-height: 2;
     }
 
     .r-contacts a {
-      color: #7C3AED;
+      color: #444;
       text-decoration: none;
     }
 
-    .r-contacts span {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+    .r-contacts a:hover { text-decoration: underline; }
+
+    .r-contacts .sep {
+      margin: 0 12px;
+      color: #ccc;
     }
 
     /* ── SECTIONS ── */
     .r-section {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .r-section-title {
-      font-size: 13px;
+      font-size: 11.5px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #7C3AED;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 5px;
+      letter-spacing: 1.8px;
+      color: #111;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
       margin-bottom: 12px;
     }
 
@@ -119,19 +112,19 @@
     }
 
     .r-edu-left h4 {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
-      color: #1a1a1a;
+      color: #111;
     }
 
     .r-edu-left p {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #555;
       margin-top: 2px;
     }
 
     .r-edu-right {
-      font-size: 12.5px;
+      font-size: 12px;
       color: #777;
       text-align: right;
       flex-shrink: 0;
@@ -141,20 +134,20 @@
     .r-skills-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px 40px;
+      gap: 7px 40px;
     }
 
     .r-skill-row {
       display: flex;
       align-items: baseline;
       gap: 8px;
-      font-size: 13px;
+      font-size: 12.5px;
     }
 
     .r-skill-label {
       font-weight: 600;
-      color: #1a1a1a;
-      min-width: 110px;
+      color: #111;
+      min-width: 105px;
       flex-shrink: 0;
     }
 
@@ -171,40 +164,34 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 3px;
     }
 
     .r-project-header h4 {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
-      color: #1a1a1a;
+      color: #111;
     }
 
     .r-project-header a {
-      font-size: 12px;
-      color: #7C3AED;
+      font-size: 11.5px;
+      color: #555;
       text-decoration: none;
     }
 
-    .r-project-tags {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin: 5px 0;
-    }
+    .r-project-header a:hover { text-decoration: underline; }
 
-    .r-project-tags span {
-      font-size: 11px;
-      background: #f3f0ff;
-      color: #7C3AED;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-weight: 500;
+    .r-project-tech {
+      font-size: 12px;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 5px;
     }
 
     .r-project p {
       font-size: 12.5px;
       color: #444;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ── CERTIFICATIONS ── */
@@ -223,9 +210,9 @@
     }
 
     .r-cert-item::before {
-      content: '▸';
-      color: #7C3AED;
-      font-size: 10px;
+      content: '–';
+      color: #999;
+      font-size: 11px;
       flex-shrink: 0;
     }
 
@@ -235,23 +222,19 @@
     }
 
     /* ── ACHIEVEMENT ── */
-    .r-achievement {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      background: #f9f7ff;
-      border-left: 3px solid #7C3AED;
-      padding: 10px 14px;
-      border-radius: 0 6px 6px 0;
-    }
-
-    .r-achievement p {
-      font-size: 13px;
+    .r-achievement-item {
+      font-size: 12.5px;
       color: #333;
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+      line-height: 1.6;
     }
 
-    .r-achievement strong {
-      color: #7C3AED;
+    .r-achievement-item::before {
+      content: '–';
+      color: #999;
+      flex-shrink: 0;
     }
 
     /* ── PRINT ── */
@@ -261,7 +244,7 @@
       .resume {
         margin: 0;
         box-shadow: none;
-        padding: 32px 40px;
+        padding: 36px 44px;
         width: 100%;
       }
     }
@@ -269,26 +252,27 @@
 </head>
 <body>
 
-  <!-- Controls -->
   <div class="page-controls">
     <a href="index.html" class="btn btn-back">← Portfolio</a>
     <button class="btn btn-print" onclick="window.print()">Download PDF</button>
   </div>
 
-  <!-- Resume -->
   <div class="resume">
 
     <!-- Header -->
-    <div class="r-header">
-      <div class="r-name">Vigneshwari Subhanji</div>
-      <div class="r-role">Data Analyst · Web Developer · IoT Developer</div>
-      <div class="r-contacts">
-        <span>📧 <a href="mailto:vignua09@gmail.com">vignua09@gmail.com</a></span>
-        <span>📍 Bharuch, Gujarat, India</span>
-        <span>🔗 <a href="https://www.linkedin.com/in/vigneshwari-subhanji-b9b290312/" target="_blank">LinkedIn</a></span>
-        <span>💻 <a href="https://github.com/VignuLogic" target="_blank">GitHub</a></span>
-        <span>🌐 <a href="https://vignulogic.github.io/vigneshwari-portfolio/" target="_blank">Portfolio</a></span>
+    <div class="r-name">Vigneshwari Subhanji</div>
+    <div class="r-role">Python Developer · Data Analyst · Web Developer</div>
+    <div class="r-contacts">
+      <div>
+        <a href="mailto:vignua09@gmail.com">vignua09@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/vigneshwari-subhanji-b9b290312/" target="_blank">linkedin.com/in/vigneshwari-subhanji</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/VignuLogic" target="_blank">github.com/VignuLogic</a>
+        <span class="sep">|</span>
+        <a href="https://vignulogic.github.io/vigneshwari-portfolio/" target="_blank">vignulogic.github.io/vigneshwari-portfolio</a>
       </div>
+      <div>Bharuch, Gujarat, India</div>
     </div>
 
     <!-- Education -->
@@ -300,7 +284,8 @@
           <p>P.P. Savani University, Surat, Gujarat</p>
         </div>
         <div class="r-edu-right">
-          2022 — 2026<br/>3rd Year
+          <!-- 2023 — 2027<br/> -->
+          3rd Year (Ongoing)
         </div>
       </div>
     </div>
@@ -311,27 +296,27 @@
       <div class="r-skills-grid">
         <div class="r-skill-row">
           <span class="r-skill-label">Languages</span>
-          <span class="r-skill-value">Python, SQL, JavaScript, HTML, CSS</span>
+          <span class="r-skill-value">Python, SQL, JavaScript, TypeScript, HTML, CSS</span>
         </div>
         <div class="r-skill-row">
           <span class="r-skill-label">Frameworks</span>
-          <span class="r-skill-value">Flask, Next.js, React</span>
+          <span class="r-skill-value">Flask, Next.js, Bootstrap, Tailwind CSS</span>
         </div>
         <div class="r-skill-row">
           <span class="r-skill-label">Data & Analytics</span>
-          <span class="r-skill-value">Power BI, Pandas, scikit-learn, Excel</span>
+          <span class="r-skill-value">Power BI, scikit-learn, Excel</span>
         </div>
         <div class="r-skill-row">
           <span class="r-skill-label">Database</span>
-          <span class="r-skill-value">MySQL, Git, GitHub</span>
+          <span class="r-skill-value">MySQL, SQLite</span>
+        </div>
+        <div class="r-skill-row">
+          <span class="r-skill-label">Tools</span>
+          <span class="r-skill-value">Git, GitHub, VS Code, Vercel, Figma</span>
         </div>
         <div class="r-skill-row">
           <span class="r-skill-label">Design</span>
-          <span class="r-skill-value">Figma, Canva</span>
-        </div>
-        <div class="r-skill-row">
-          <span class="r-skill-label">Other</span>
-          <span class="r-skill-value">IoT Integration, REST APIs</span>
+          <span class="r-skill-value">Canva, Figma</span>
         </div>
       </div>
     </div>
@@ -343,24 +328,48 @@
       <div class="r-project">
         <div class="r-project-header">
           <h4>Customer Churn Dashboard</h4>
-          <a href="https://github.com/VignuLogic" target="_blank">github.com/VignuLogic</a>
+          <a href="https://github.com/VignuLogic/churn_dashboard" target="_blank">github.com/VignuLogic/churn_dashboard</a>
         </div>
-        <div class="r-project-tags">
-          <span>Python</span><span>scikit-learn</span><span>Power BI</span><span>Pandas</span>
-        </div>
-        <p>Built an end-to-end data analytics pipeline to predict customer churn using machine learning. Performed data cleaning, feature engineering, trained a classification model with scikit-learn, and created an interactive Power BI dashboard to visualise churn patterns and business insights.</p>
+        <div class="r-project-tech">Python · Flask · Pandas · JavaScript · HTML/CSS</div>
+        <p>Analytics dashboard to visualise customer churn data with dynamic charts and KPI summaries. Built with Flask backend and a clean responsive UI for business insights.</p>
       </div>
 
       <div class="r-project">
         <div class="r-project-header">
-          <h4>MyPetCare — IoT Pet Health Monitor</h4>
-          <a href="https://github.com/VignuLogic" target="_blank">github.com/VignuLogic</a>
+          <h4>MyPetCare</h4>
+          <a href="https://github.com/VignuLogic/MyPetCare" target="_blank">github.com/VignuLogic/MyPetCare</a>
         </div>
-        <div class="r-project-tags">
-          <span>Flask</span><span>MySQL</span><span>Python</span><span>IoT</span><span>HTML/CSS</span>
-        </div>
-        <p>Developed a full-stack IoT-integrated web application for smart pet care. Features include real-time sensor data monitoring, health tracking, appointment scheduling, and a responsive dashboard built with Flask and MySQL.</p>
+        <div class="r-project-tech">Python · Flask · MySQL · Bootstrap · HTML/CSS</div>
+        <p>Full-stack web application for pet owners. Features user login/signup, pet registration, service booking, grooming scheduling, and vaccination tracking. Built with Flask backend and MySQL database.</p>
       </div>
+
+      <div class="r-project">
+        <div class="r-project-header">
+          <h4>UFC Sales Dashboard</h4>
+          <a href="https://github.com/VignuLogic/UFC" target="_blank">github.com/VignuLogic/UFC</a>
+        </div>
+        <div class="r-project-tech">Python · Flask · CSV · JavaScript</div>
+        <p>Sales data visualisation tool that parses CSV datasets and renders interactive charts and metric cards using Flask and JavaScript.</p>
+      </div>
+
+      <div class="r-project">
+        <div class="r-project-header">
+          <h4>Restaurant Finder</h4>
+          <a href="https://github.com/VignuLogic/resturant-finder" target="_blank">github.com/VignuLogic/resturant-finder</a>
+        </div>
+        <div class="r-project-tech">Python · Flask · SQLite · HTML/CSS/JS</div>
+        <p>Location-based restaurant discovery web app with search and filter functionality. Built with Python Flask and SQLite with a responsive frontend.</p>
+      </div>
+
+      <div class="r-project">
+        <div class="r-project-header">
+          <h4>Demo Portfolio</h4>
+          <a href="https://github.com/VignuLogic/demo-portfolio" target="_blank">github.com/VignuLogic/demo-portfolio</a>
+        </div>
+        <div class="r-project-tech">Next.js · TypeScript · Tailwind CSS · Framer Motion</div>
+        <p>Modern animated portfolio built with Next.js 14 and TypeScript. Deployed on Vercel with smooth page transitions and fully responsive design.</p>
+      </div>
+
     </div>
 
     <!-- Certifications -->
@@ -380,8 +389,8 @@
     <!-- Achievement -->
     <div class="r-section">
       <div class="r-section-title">Achievement</div>
-      <div class="r-achievement">
-        <p>🏆 <strong>Top 10 out of 135 teams</strong> at INDUX 5.0 National Hackathon 2025 — awarded ₹5,000 cash prize for innovative problem solving under competitive conditions.</p>
+      <div class="r-achievement-item">
+        Top 10 out of 135 teams at INDUX 5.0 National Hackathon 2025 — awarded ₹5,000 cash prize for innovative problem solving under competitive conditions.
       </div>
     </div>
 
