@@ -568,6 +568,47 @@ body {
   color: var(--primary-light);
 }
 
+/* ── CONTACT ── */
+.contact-sub {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 36px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.contact-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.2);
+}
+
+.contact-card i {
+  font-size: 22px;
+  color: var(--primary-light);
+}
+
 /* ── FOOTER ── */
 .footer {
   text-align: center;
@@ -598,3 +639,4 @@ body {
   .about-cards { grid-template-columns: 1fr; }
   .contact-cards { flex-direction: column; align-items: center; }
 }
+

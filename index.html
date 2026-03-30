@@ -173,7 +173,7 @@
           <h3>MyPetCare</h3>
           <p>IoT-integrated pet care web application built with Flask and MySQL. Features health tracking, appointment scheduling, and real-time sensor data integration for smart pet monitoring.</p>
           <div class="project-tags">
-            <span>Flask</span><span>MySQL</span><span>IoT</span><span>Python</span>
+            <span>Flask</span><span>MySQL</span><span>Python</span>
           </div>
         </div>
 
@@ -197,20 +197,71 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="section section-alt" id="certifications">
+    <section class="section section-alt" id="certifications">
     <div class="container">
       <h2 class="section-title">Certifications</h2>
-      <div class="cert-grid">
-        <div class="cert-card"><i class="fab fa-python"></i><span>100 Days of Code — Python</span><small>Udemy</small></div>
-        <div class="cert-card"><i class="fas fa-brain"></i><span>Learning Analytics Tools</span><small>NPTEL · IIT Bombay</small></div>
-        <div class="cert-card"><i class="fas fa-database"></i><span>Python for Data Science</span><small>Saylor Academy</small></div>
-        <div class="cert-card"><i class="fas fa-chart-pie"></i><span>Data Analytics & Visualization</span><small>Accenture · Forage</small></div>
-        <div class="cert-card"><i class="fab fa-google"></i><span>Google Gen AI Study Jams</span><small>Google Developer Groups</small></div>
-        <div class="cert-card"><i class="fas fa-cloud"></i><span>Prompt Design in Vertex AI</span><small>Google Cloud</small></div>
-        <div class="cert-card"><i class="fas fa-laptop-code"></i><span>Web Development Basics</span><small>GDGc PPSU</small></div>
-      </div>
+<div class="cert-grid">
+  <div class="cert-card" onclick="openCert('assets/100 days of code.png', '100 Days of Code — Python')">
+    <i class="fab fa-python"></i>
+    <div>
+      <span>100 Days of Code — Python</span>
+      <small>Udemy</small>
     </div>
-  </section>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/learning analytics tools.png', 'Learning Analytics Tools')">
+    <i class="fas fa-brain"></i>
+    <div>
+      <span>Learning Analytics Tools</span>
+      <small>NPTEL · IIT Bombay</small>
+    </div>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/python for data science.png', 'Python for Data Science')">
+    <i class="fas fa-database"></i>
+    <div>
+      <span>Python for Data Science</span>
+      <small>Saylor Academy</small>
+    </div>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/data analytics and visualization.png', 'Data Analytics & Visualization')">
+    <i class="fas fa-chart-pie"></i>
+    <div>
+      <span>Data Analytics & Visualization</span>
+      <small>Accenture · Forage</small>
+    </div>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/google gen ai study gems.png', 'Google Gen AI Study Jams')">
+    <i class="fab fa-google"></i>
+    <div>
+      <span>Google Gen AI Study Jams</span>
+      <small>Google Developer Groups</small>
+    </div>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/prompt design in vertex ai.png', 'Prompt Design in Vertex AI')">
+    <i class="fas fa-cloud"></i>
+    <div>
+      <span>Prompt Design in Vertex AI</span>
+      <small>Google Cloud</small>
+    </div>
+  </div>
+  <div class="cert-card" onclick="openCert('assets/web development.png', 'Web Development Basics')">
+    <i class="fas fa-laptop-code"></i>
+    <div>
+      <span>Web Development Basics</span>
+      <small>GDGc PPSU</small>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Certificate Modal -->
+<div id="cert-modal" onclick="closeCert()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;flex-direction:column;">
+  <div style="position:relative;max-width:800px;width:90%;">
+    <button onclick="closeCert()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;">✕</button>
+    <img id="cert-img" src="" alt="Certificate" style="width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.5);"/>
+    <p id="cert-title" style="text-align:center;color:#fff;margin-top:14px;font-size:16px;font-weight:600;"></p>
+  </div>
+</div>
 
   <!-- CONTACT -->
   <section class="section" id="contact">

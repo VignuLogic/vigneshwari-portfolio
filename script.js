@@ -109,3 +109,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+function openCert(src, title) {
+  const modal = document.getElementById('cert-modal');
+  document.getElementById('cert-img').src = src;
+  document.getElementById('cert-title').textContent = title;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCert() {
+  document.getElementById('cert-modal').style.display = 'none';
+  document.body.style.overflow = '';
+}
