@@ -245,7 +245,7 @@ body {
 .hero-photo { flex-shrink: 0; }
 
 .photo-frame {
-  width: 280px; height: 280px;
+  width: 340px; height: 340px;
   border-radius: 50%;
   border: 3px solid transparent;
   background: linear-gradient(var(--bg), var(--bg)) padding-box,
